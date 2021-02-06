@@ -1,7 +1,9 @@
 import React from 'react';
 import {useState} from 'react';
 import { sendMessage, isTyping } from 'react-chat-engine';      //These functions come pre-Built
-import { SendOutlined, PictureOutlined} from '@ant-design/icons';
+import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
+import SendIcon from '@material-ui/icons/Send';
+import SendRoundedIcon from '@material-ui/icons/SendRounded';
 
 import './MessageForm.css'
 
@@ -44,7 +46,7 @@ function MessageForm(props) {
             />
             <label htmlFor='upload-button'>
                 <span className='image-button'>
-                    <PictureOutlined className='picture-icon'/>     {/* Icon for uploading images */}
+                    <PhotoLibraryIcon className='picture-icon'/>
                 </span>
             </label>
             <input
@@ -55,9 +57,11 @@ function MessageForm(props) {
                 onChange={handleUpload}
                 onSubmit={handleSubmit}
             />
-            <button type='submit' className='send-button'>
-                <SendOutlined className='send-icon'/>
-            </button>
+            <div className='sendIconButton'>
+                <button type='submit' className='send-button'>
+                    <SendRoundedIcon className='send-icon'/>
+                </button>
+            </div>
         </form>
     )
 }

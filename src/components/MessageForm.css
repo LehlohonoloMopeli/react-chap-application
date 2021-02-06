@@ -1,4 +1,26 @@
 .picture-icon {
+    color: #800080;
+    padding: 0px;
+}
+
+.send-icon {
+    color: #800080;
+    padding: 0px;
+    transform:  rotate(0deg);
+    margin-right: 5px;
+}
+
+.message-form {
+    display: flex;
     align-items: center;
-    size: 10vh;
+    position: relative;
+}
+
+.sendIconButton {
+    position: relative;
+    margin-right: 0px;
+}
+
+.message-input {
+    width: 100%;
 }
