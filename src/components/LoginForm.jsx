@@ -53,8 +53,8 @@ function LoginForm() {
                     <h5 className='disclaimer' align='center'>
                         <span>Note: If you just want to test how this application</span><br/>
                         <span>works, use the following credentials:</span><br/>
-                        <span>Email : <strong>Honoured-Guest</strong></span><br/>
-                        <span>Password : <strong>guest123</strong></span><br/>
+                        <span>Username : <b>Honoured-Guest</b></span><br/>
+                        <span>Password : <b>guest123</b></span><br/>
                         <span>Feel free to leave me a message in there.</span>
                     </h5>
                 </form>
