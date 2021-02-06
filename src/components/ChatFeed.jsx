@@ -12,6 +12,18 @@ function ChatFeed(props) {              // Props stands for all properties. This
 
     const chat = chats && chats[activeChat];        // If chats exist (current chat), finds the chats, and then the active chats
     
+    const renderReadReceipts = (message, isMyMessage) => {
+        return chat.people.map((person, index) => person.last_read === message.id && (
+            <div
+                key={`read_${index}`}
+                className='read-receipt'
+                style={{
+                    float : isMyMessage ? 'right' : 'left',
+                    backgroundImage : `url(${person?.person?.avatar})`
+                }}
+            />
+        ))
+    }
 
     // Used for generating messages
 
@@ -32,8 +44,8 @@ function ChatFeed(props) {              // Props stands for all properties. This
                             : <TheirMessage message={message} lastMessage={messages[lastMessage]}/>                              // If it is not their message, render the component "TheirMessage"
                         }
                     </div>
-                    <div className="read-receipts" style={{ marginRight : isMyMessage? '9px' : '0px', marginLeft : isMyMessage? '0px' : '68px'}}>
-                        read-receipts
+                    <div className="read-receipts" style={{ marginRight : isMyMessage? '20px' : '0px', marginLeft : isMyMessage? '0px' : '68px'}}>
+                        {renderReadReceipts(message, isMyMessage)}
                     </div>
 
                 </div>
