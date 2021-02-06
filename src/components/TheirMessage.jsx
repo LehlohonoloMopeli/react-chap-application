@@ -12,7 +12,7 @@ function TheirMessage({lastMessage, message}) {
             {/* How we display the first message, if it is the first message. */}
             {isFirstMessageByUser && (
                 <div
-                    className="avatar"
+                    className="message-avatar"
                     style={{backgroundImage : `url(${message?.sender?.avatar})`}}
                 />
             )}

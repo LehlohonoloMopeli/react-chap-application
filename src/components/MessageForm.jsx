@@ -3,6 +3,8 @@ import {useState} from 'react';
 import { sendMessage, isTyping } from 'react-chat-engine';      //These functions come pre-Built
 import { SendOutlined, PictureOutlined} from '@ant-design/icons';
 
+import './MessageForm.css'
+
 // Will be used for sending messages.
 function MessageForm(props) {
 
@@ -38,6 +40,7 @@ function MessageForm(props) {
                 placeholder="Don't be boring..."
                 value={value}
                 onChange={handleChange}
+                onSubmit={handleSubmit}
             />
             <label htmlFor='upload-button'>
                 <span className='image-button'>
@@ -50,6 +53,7 @@ function MessageForm(props) {
                 id='upload-button'
                 style={{ display : 'none'}}
                 onChange={handleUpload}
+                onSubmit={handleSubmit}
             />
             <button type='submit' className='send-button'>
                 <SendOutlined className='send-icon'/>

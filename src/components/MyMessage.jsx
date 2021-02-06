@@ -17,7 +17,7 @@ function MyMessage({message}) {
     }
 
     return (
-        <div className="message" style={{ float : 'right', marginRight : '18px', color : 'white', backgroundColor : '#0080ff'}}>
+        <div className="message" style={{ float : 'right', marginRight : '18px', color : 'white', backgroundColor : '#800080'}}>
             {message.text}
         </div>
     )
