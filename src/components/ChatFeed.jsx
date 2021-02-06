@@ -24,7 +24,7 @@ function ChatFeed(props) {              // Props stands for all properties. This
             const isMyMessage = userName === message.sender.username;       // Check if the message is mine using the username
             
             return (
-                <div key={ `msg_${index}`} style={{ width : `100%` }}>      {/* React requires us to define a unique key for each elemnt in a list (can be anything, as long as it is unique) */}
+                <div key={ `msg_${index}`} style={{ width : `100%`}}>      {/* React requires us to define a unique key for each elemnt in a list (can be anything, as long as it is unique) */}
                     <div className="message-block">   
                         {
                             isMyMessage                                     // If it's my message
