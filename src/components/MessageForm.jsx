@@ -2,7 +2,6 @@ import React from 'react';
 import {useState} from 'react';
 import { sendMessage, isTyping } from 'react-chat-engine';      //These functions come pre-Built
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
-import SendIcon from '@material-ui/icons/Send';
 import SendRoundedIcon from '@material-ui/icons/SendRounded';
 
 import './MessageForm.css'
@@ -39,7 +38,7 @@ function MessageForm(props) {
         <form className='message-form' onSubmit={handleSubmit}>
             <input
                 className='message-input'
-                placeholder="Don't be boring..."
+                placeholder="Send a message..."
                 value={value}
                 onChange={handleChange}
                 onSubmit={handleSubmit}

@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
 
+import "./LoginForm.css"
+
 function LoginForm() {
 
     const[username, setUsername] = useState('');
@@ -48,6 +50,13 @@ function LoginForm() {
                         </button>
                     </div>
                     <h2 className='error'>{error}</h2>
+                    <h5 className='disclaimer' align='center'>
+                        <span>Note: If you just want to test how this application</span><br/>
+                        <span>works, use the following credentials:</span><br/>
+                        <span>Email : <strong>Honoured-Guest</strong></span><br/>
+                        <span>Password : <strong>guest123</strong></span><br/>
+                        <span>Feel free to leave me a message in there.</span>
+                    </h5>
                 </form>
             </div>
         </div>
